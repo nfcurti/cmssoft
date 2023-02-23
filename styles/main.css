@@ -4,6 +4,7 @@ body {
 }
 
 .blogTableBox {
+  display: grid;
   position: relative;
   width: 90%;
   margin-left: 5%;
