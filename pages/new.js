@@ -5,6 +5,7 @@ import { useState } from 'react'
 export default function Home() {
     const [title, setTitle] = useState('');
     const [headline, setHeadline] = useState('');
+    const [image, setImage] = useState('')
     const [body, setBody] = useState('');
 
     const save = async () => {
@@ -22,7 +23,8 @@ export default function Home() {
           title: title,
           headline: headline,
           body: body,
-          hash: ans
+          hash: ans,
+          image: image
         }),
       });
 
@@ -53,6 +55,9 @@ export default function Home() {
         <br/>
         <br/>
         <label>Headline:<br/> <input className='textField' type='text' value={headline} onChange={(txt) => setHeadline(txt.target.value)}></input></label>
+        <br/>
+        <br/>
+        <label>Image URL:<br/> <input className='textField' type='text' value={image} onChange={(txt) => setImage(txt.target.value)}></input></label>
         <br/>
         <br/>
         <label>Body:<br/> <textarea  rows={10} className='textField' type='text' value={body} onChange={(txt) => setBody(txt.target.value)}></textarea></label>

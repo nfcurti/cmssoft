@@ -27,6 +27,7 @@ export default async function handler(req, res) {
                 $set: {
                     title: bodyParsed.title,
                     body: bodyParsed.body,
+                    image: bodyParsed.image,
                     headline: bodyParsed.headline
                 }
             }

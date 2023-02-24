@@ -57,6 +57,7 @@ export default function Home() {
               <div className='bTBHTitle'><p>Title</p></div>
               <div className='bTBHHeadline'><p>Headline</p></div>
               <div className='bTBHBody'><p>Body</p></div>
+              <div className='bTBHImage'><p>Image</p></div>
               <div className='bTBHActions'><p>Actions</p></div>
           </div>
           {
@@ -64,6 +65,7 @@ export default function Home() {
             <div className='bTBBTitle'><p>{item.title}</p></div>
             <div className='bTBBHeadline'><p>{item.headline}</p></div>
             <div className='bTBBBody'><p>{item.body}</p></div>
+            <div className='bTBBImage'><p><img src={item.image}/></p></div>
             <div className='bTBBActions'><a href={`/edit?id=${item._id}&valid=true`}><button>Edit</button></a> <button onClick={() => remove({
               hash: item.hash
             })}>Remove</button></div>
